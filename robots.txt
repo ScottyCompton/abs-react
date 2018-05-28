@@ -1,0 +1,3 @@
+Sitemap: https://www.americanbeautystar.com/sitemap.xml
+User-agent: *
+Disallow:

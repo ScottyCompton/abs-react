@@ -1,0 +1,214 @@
+@import (reference) "../../theme/variables.less";
+
+.archive{
+  background: @base-color;
+  margin: 0 auto;
+
+  .page-title {
+    width:100%;
+  }
+  .archiveList {
+      width:80%;
+      margin: 0 auto;
+      * {
+        font-family: 'Bodoni W01 Book_709611';
+      }
+
+      .page-title {
+        text-align: right;
+        padding-top:3.0vh;
+        h1{
+          font-size: 3.0vw;
+          text-transform: uppercase;
+          background-color: @brand-accent-color;
+          color: @base-color;
+          padding: 10px;
+          display: inline-block;
+        }
+      }
+
+      .archiveCategoryName.hash {
+        display: block;
+        position: relative;
+        visibility: hidden;
+      }
+
+      .archiveItem {
+        width:90%;
+        text-align: initial;
+        padding: 20px;
+
+        .post-lower-border {
+          width: 97%;
+          border-bottom: 2px solid #c0c0c0;
+          margin-top: 3vh;
+        }
+
+        .post-img {
+          max-width:200px;
+          padding-right:2vw;
+          img {
+            border: 1px solid @base3-color;
+            max-width:200px;
+          }
+        }
+
+        .post-catgory-link, .post-date {
+          color: #808080;
+          font-size:2.5vh;
+          text-transform:capitalize;
+        }
+
+        .post-date {
+          font-style:italic;
+        }
+        .post-category {
+          margin-bottom: 10px;
+        }
+        .post-catgory-excerpt {
+          font-size:20px;
+          img {
+            display:none;
+          }
+        }
+        .post-readmore {
+          padding-bottom:3vh;
+          position:relative;
+          top:3vh;
+          a {
+            color: @brand-accent-color;
+            text-decoration:none;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+          span.arrow-continue {
+            // font-family: 'Webdings';
+            color: @brand-accent-color;
+          }
+        }
+        .post-title {
+          h4 {
+            font-family: 'Bodoni W01 Book_709611';
+            font-size: 2.75vw;
+            margin:1.0vh auto;
+            a {
+              text-decoration:none;
+              color: @brand-accent-color;
+            }
+            a:hover {
+              text-decoration:underline;
+            }
+          }
+        }
+      }
+    }
+}
+
+@media(orientation:landscape) {
+
+  @media(max-width:1023px) {
+    .archive {
+      .archiveList {
+        .archiveCategory {
+          padding-top:5%;
+          .archiveItem {
+            padding:0px;
+            width:98%;
+            padding-bottom: 5%;
+            .post-catgory-excerpt {
+              font-size:2.5vw;
+            }
+            .post-catgory-link {
+              font-size:2.5vw;
+            }
+            .post-title {
+              h4 {
+                font-size:3.5vw;
+                margin-top:0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(orientation:portrait) {
+  @media(min-width:768px) and (max-width:1024px) {
+    .archive {
+      .archiveList {
+        .archiveCategory {
+          padding-top:5%;
+          .archiveItem {
+            padding:0px;
+            width:98%;
+            padding-bottom: 5%;
+            .post-catgory-excerpt {
+              font-size:2.5vh;
+            }
+            .post-catgory-link {
+              font-size:2.0vh;
+            }
+            .post-title {
+              h4 {
+                font-size:3.0vh;
+                margin-top:0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width:767px) and (min-width:501px) {
+    .archive {
+      .archiveList {
+        width:95%;
+        .archiveCategory {
+          padding-top:5%;
+          .archiveItem {
+            padding:0px;
+            width:98%;
+            padding-bottom: 5%;
+            .post-title {
+              h4 {
+                font-size:4.0vw;
+                margin-top:0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width:500px) {
+    .archive {
+      .archiveList {
+        width:95%;
+        .archiveCategory {
+          padding-top:5%;
+          .archiveItem {
+            padding:0px;
+            width:98%;
+            padding-bottom: 5%;
+            .post-catgory-excerpt {
+              font-size:4.0vw;
+            }
+            .post-catgory-link {
+              font-size:4.0vw;
+            }
+            .post-title {
+              h4 {
+                font-size:6.0vw;
+                margin-top:0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

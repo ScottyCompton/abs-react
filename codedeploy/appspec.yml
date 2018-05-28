@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /var/www/releases/americanbeautystar.com
+hooks:
+  ApplicationStop:
+    - location: scripts/deregister_from_elb.sh
+      runas: root
+    - location: scripts/app-stop.sh
+      runas: americanbeautystar.com
+  BeforeInstall:
+    - location: scripts/before-install.sh
+      runas: root
+      timeout: 600
+  AfterInstall:
+    - location: scripts/app-stop.sh
+      runas: americanbeautystar.com
+    - location: scripts/after-install.sh
+      runas: root
+      timeout: 600
+  ApplicationStart:
+    - location: scripts/app-start.sh
+      timeout: 600
+      runas: americanbeautystar.com
+    - location: scripts/register_with_elb.sh
+      runas: root

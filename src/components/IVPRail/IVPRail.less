@@ -1,0 +1,177 @@
+@import (reference) "../../theme/variables.less";
+
+  .theRail.loaded {
+    opacity: 1.0;
+    transition: all 0.5s ease-in;
+  }
+  .theRail.notloaded {
+    opacity: 0;
+  }
+  .rails {
+  position:relative;
+  float:left;
+  width:100%;
+  background-color:@base-color;
+  .theRail {
+    .railTitle {
+        color: @brand-accent-color;
+        text-transform: uppercase;
+        font-size: 2.0vw;
+        font-family: 'Bodoni W01 Book_709611';
+    }
+
+    .ivpRail {
+      width:94%;
+      margin: 3vh auto;
+      h1{
+        color: #FB0086;
+        font-size: 4vh;
+        text-transform: uppercase;
+        padding-left: 10px;
+        padding-bottom: 1vw;
+      }
+      .slick-slider {
+        button.slick-arrow.slick-left-arrow {
+          left: -3%;
+        }
+        button.slick-arrow.slick-right-arrow {
+          right: -3%;
+        }
+        .fa-angle-double-left,
+        .fa-angle-double-right {
+          color: @brand-accent-color;
+        }
+        .fa-angle-double-left:hover,
+        .fa-angle-double-right:hover {
+          color:@brand-accent-color2;
+        }
+      }
+      .railCard, .railItem {
+        position: relative;
+        margin: 2%;
+        box-sizing: border-box;
+        border: 2px solid @base7-color;
+        overflow: hidden;
+        img {
+          box-sizing: border-box;
+        }
+        .metaInfo {
+          position: absolute;
+          z-index: 10000;
+          bottom: 0;
+          background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.51) 1%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.51) 1%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.51) 1%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+          width: 100%;
+          color: #fff;
+          padding: 2%;
+          .metaShortDesc {
+            position: absolute;
+            left: 0px;
+            padding: 3%;
+            font-family: 'Didact Gothic', sans-serif;
+            bottom: 0px;
+            width: 94%;
+            font-size: 0.8vw;
+            border-top: 1px solid #101010;
+          }
+        }
+        .slideHoverOn {
+          height:100%;
+          transition: all .200s ease-in;
+          .metaTitle {
+            padding-top:3%;
+          }
+          .metaPlayBtn {
+            display:block;
+            position:absolute;
+            width:20%;
+            margin-left:40%;
+            top:50%;
+            opacity:0.5;
+            transform:translate(-25%, -50%);
+          }
+          .metaPlayBtn.btnHover {
+            opacity: 0.8;
+          }
+          .metaPlayBtn.btnOff {
+            opacity: 0.5;
+          }
+          .metaShortDesc {
+            bottom:0;
+            transition: all .200s ease-in;
+            border-top: 1px solid #505050;
+          }
+        }
+        .slideHoverOff {
+          height: 5vh;
+          transition: all .200s ease-in;
+          .metaPlayBtn {
+            display:none;
+          }
+          .metaShortDesc {
+            bottom: -120%;
+            transition: all .200s ease-in;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/*
+@media(orientation: portrait) {
+  .rails {
+    .theRail {
+      .ivpRail {
+        .railCard {
+          .metaInfo {
+            font-size:4.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+*/
+
+@media(max-width:800px) {
+  .rails {
+    .theRail {
+      .ivpRail {
+        .smallScreenRail {
+          display:flex;
+          flex-direction:row;
+          flex-wrap:wrap;
+          .carouselRailCard {
+            width:50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:500px) {
+  .rails {
+    .theRail {
+      .ivpRail {
+        .smallScreenRail {
+          display:flex;
+          flex-direction:row;
+          flex-wrap:wrap;
+          .carouselRailCard {
+            width:100%;
+            .railCard {
+              .metaInfo {
+                font-size:5.0vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

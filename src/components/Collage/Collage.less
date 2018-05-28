@@ -1,0 +1,41 @@
+.collageContainer {
+  width: 100%;
+  position:relative;
+  float:left;
+
+  .collage {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    .castMemberContainer {
+      .castMember {
+        position:absolute;
+        background-repeat: no-repeat;
+      }
+      .castMember.hoverState {
+          transition: all 0.5s ease-in;
+      }
+      .castMember.introToStage {
+        opacity: 0;
+      }
+      .castMember.activeCastMember {
+        opacity: 1.0;
+        transition: opacity 1.0s ease-in;
+      }
+      .castMember.inactiveCastMember {
+        opacity: 0.5;
+        transition: opacity 1.0s ease-in;
+      }
+      .tooltipContent {
+        h4 {
+          font-size: 1.0vw;
+          font-weight: bolder;
+          margin-bottom: 5%;
+        }
+      }
+    }
+  }
+}

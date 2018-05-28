@@ -1,0 +1,12 @@
+{
+  "apps": [{
+    "name": "americanbeautystar.com",
+    "script": "runprod.sh",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "cwd": "/var/www/html/site",
+    "env": {
+      "NODE_ENV": "production",
+      "STAGING": true
+    }
+  }]
+}

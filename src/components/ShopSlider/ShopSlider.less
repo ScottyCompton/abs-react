@@ -1,0 +1,45 @@
+@import (reference) "../../theme/variables.less";
+
+  .shopSlider {
+  position:relative;
+  float:left;
+  width:100%;
+  background-color:@base-color;
+
+    .shopRail {
+      width:95%;
+      margin: 1vh auto;
+      .slick-slider {
+        button.slick-arrow.slick-left-arrow {
+          left: -5%;
+          top: 50%;
+          transform: translate(0,-50%);
+        }
+        button.slick-arrow.slick-right-arrow {
+          right: -5%;
+          top: 50%;
+          transform: translate(0,-50%);
+        }
+      }
+      .slideCard {
+        margin: 2%;
+        max-height:40vh;
+        overflow:hidden;
+        img {
+          box-sizing: border-box;
+          border: 1px solid @base6-color;
+        }
+      }
+    }
+
+}
+
+@media(max-width:850px) {
+  .shopSlider {
+    .shopRail {
+      .slideCard {
+        max-height: 50vh;
+      }
+    }
+  }
+}

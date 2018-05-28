@@ -1,0 +1,281 @@
+@import (reference) "../../theme/variables.less";
+
+.post{
+  background:white;
+  a {
+    color: @brand-accent-color;
+    text-decoration: none;
+    cursor:pointer;
+  }
+  a:hover {
+    text-decoration:underline;
+  }
+  .aLittleSpace {
+    height:3vh;
+    width:100%;
+    position:relative;
+    float:left;
+  }
+  .playerOuterWrapper {
+    width:80%;
+    margin: 2% auto;
+  }
+  .blurbArea, .optionalVideo, .content {
+    margin-top: 3vh!important;
+  }
+  .blurbText, .content {
+    font-size: 1.5vw;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 100;
+    p, div {
+      font-weight: 100;
+    }
+    span {
+      font-weight:lighter;
+    }
+  }
+  .typeHeader{
+    background: black;
+    text-align: center;
+    clear:both;
+
+    h2{
+      color:white;
+      font-size:2.5vw;
+      padding: 15px;
+      font-family: 'Bodoni W01 Book_709611';
+    }
+  }
+
+  .primaryContent {
+    background-image: url(https://d1bud3tr8474k6.cloudfront.net/wp-content/uploads/2017/07/12184126/blogborder.png);
+    background-repeat: repeat-y;
+    font-family: 'Didact Gothic', sans-serif;
+
+    .belowShopSlider {
+      width: 100%;
+      min-height: 2vh;
+      padding: 6px;
+      background-color:@base6-color;
+      margin-top: 2vh;
+    }
+
+    .shopSliderLabel h3 {
+      text-align: center;
+      font-size: 3.0vh;
+      font-weight: bolder;
+      color: #000;
+      font-family: Lato;
+      padding: 2%;
+      margin: 0;
+    }
+
+    .socialSharing {
+        width: 100%;
+        min-height: 2vh;
+        padding: 2px;
+        background-color:@base6-color;
+        margin-top: 2vh;
+        .socialIcons {
+          .socialIcon {
+            padding: 2%;
+            .facebook {
+              margin: 0;
+            }
+          }
+        }
+    }
+  }
+
+  .secondaryContent{
+    padding: 5vh 2vw;
+    box-sizing: border-box;
+    background:white;
+
+    .emailSignup{
+      width:100%;
+      margin: 0 auto;
+      text-align: center;
+
+      span{
+        display:block;
+      }
+
+      input{
+        width:100%;
+        margin-top:15px;
+      }
+    }
+
+    .advertSlot{
+      text-align:center;
+      margin:30px 0;
+    }
+  }
+
+  .mainBody{
+    margin: 5vh;
+    h3{
+      font-size: 3.0vw;
+      font-family: 'Bodoni W01 Book_709611';
+      padding-bottom:3vh;
+      color: @brand-accent-color;
+    }
+    .metaInfo {
+      background-color: @base6-color;
+    }
+    .breadcrumb, .postDate {
+      padding: 1vh 10px;
+    }
+
+    .breadcrumb ul {
+
+      li{
+        display:inline-block;
+        text-transform: capitalize;
+        a {
+          text-decoration:none;
+          color: @base2-color;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+      li + li:before {
+        content: " / ";
+      }
+    }
+  }
+}
+
+@media(max-width: 1100px) {
+  .post {
+    .playerOuterWrapper {
+      width:100%;
+    }
+    .content, .blurbText {
+      font-size:2.5vw;
+    }
+    .primaryContent {
+      background-size: 0%;
+    }
+    .mainBody {
+      h3 {
+        font-size: 4.0vw;
+      }
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  .post {
+    .content, .blurbText {
+      font-size:3.5vw;
+    }
+    .mainBody {
+      margin: 2vw;
+      h3 {
+        font-size: 4.0vw;
+      }
+    }
+    .typeHeader {
+      h2 {
+        font-size: 3.5vw;
+      }
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .post {
+    .mainBody {
+      h3 {
+        font-size: 5.0vw;
+      }
+      .breadcrumb, .postDate {
+        font-size: 4.0vw;
+      }
+    }
+    .typeHeader {
+      h2 {
+        font-size: 5.0vw;
+      }
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .post {
+    .mainBody {
+      h3 {
+        font-size: 6.0vw;
+      }
+    }
+  }
+}
+
+
+@media(orientation:landscape) {
+  @media(min-width:602px) and (max-width:768px) {
+    .post {
+      .primaryContent {
+        .socialSharing {
+          .socialIcons {
+            padding:3px 3px;
+            width:20%;
+            .socialIcon {
+              a {
+                svg.headerIcon {
+                  width:4vw!important;
+                  height:4vw!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width:601px) {
+    .post {
+      .primaryContent {
+        .socialSharing {
+          .socialIcons {
+            padding:3px 3px;
+            width:50%;
+            .socialIcon {
+              a {
+                svg.headerIcon {
+                  width:2.5vw!important;
+                  height:2.5vw!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(orientation:portrait) {
+  @media(max-width:600px) {
+    .post {
+      .primaryContent {
+        .socialSharing {
+          .socialIcons {
+            width:100%;
+            .socialIcon {
+              a {
+                svg.headerIcon {
+                  width:7vw!important;
+                  height:7vw!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

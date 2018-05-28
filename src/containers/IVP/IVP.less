@@ -1,0 +1,67 @@
+.ivp {
+  position: relative;
+  float:left;
+  width:100%;
+  background-color: @base-color;
+  display: block!important;
+
+  .comments-container {
+    width:100%;
+    margin: 0 auto;
+    margin-top: 10vh;
+    position:relative;
+    float:left;
+    .fb-comments-container {
+      width:90%;
+      margin: 0 auto;
+      padding: 2%;
+      border-radius: 5px;
+      border: 1px solid @base7-color;
+      background-color:@base3-color;
+    }
+  }
+
+  .playerControlBarContainer {
+    position: relative;
+    min-height: 30px!important;
+    float: left;
+    width: 100%;
+    background-color: @brand-accent-color;
+    z-index:100;
+  }
+
+  .rails {
+    position:relative;
+    float:left;
+    width:100%;
+
+    .ivpRail {
+      width:94%;
+      margin: 3vh auto;
+      .slick-slider {
+        button.slick-arrow.slick-left-arrow {
+          left: -7.0%;
+          top:15%;
+        }
+        button.slick-arrow.slick-right-arrow {
+          right: -7%;
+          top: 15%;
+        }
+      }
+    }
+  }
+  .metaBlock{
+    position:relative;
+    float:left;
+    width:100%;
+    z-index:101;
+    margin-top:40px;
+
+    h1{
+      color:@brand-accent-color;
+      font-size: 4vh;
+      text-transform: uppercase;
+      padding-left: 3vw;
+    }
+  }
+}

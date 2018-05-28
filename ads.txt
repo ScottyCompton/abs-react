@@ -1,0 +1,9 @@
+ad.net, 13, DIRECT
+tremorhub.com, nntek, RESELLER, 1a4e959a1b50034a
+freewheel.tv, 259634, RESELLER
+tidaltv.com, 24283, DIRECT
+lkqd.net, 82, RESELLER, 59c49fa9598a0117
+lkqd.com, 82, RESELLER, 59c49fa9598a0117
+advertising.com, 6595, RESELLER
+spotxchange.com, 79329, RESELLER, 7842df1d2fe2db34
+spotx.tv, 79329, RESELLER, 7842df1d2fe2db34

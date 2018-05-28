@@ -1,0 +1,198 @@
+@import (reference) "../../theme/variables.less";
+.show {
+  .showPosterArea {
+    width:100%;
+    position:relative;
+    float:left;
+    .showPoster {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      /*
+      background: rgb(255,255,255);
+      background: -moz-linear-gradient(top,  rgba(255,255,255,1) 28%, rgba(192,192,192,1) 100%);
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 28%,rgba(192,192,192,1) 100%);
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 28%,rgba(192,192,192,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c0c0c0',GradientType=0 );
+
+      .showpage_hype_container {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 80vh;
+        width: 80%;
+        margin: 0 auto;
+        #showpage_hype_container {
+          position:relative;
+          margin:auto;
+          width:80%;
+          overflow:hidden;
+          top:0px;
+        }
+      }
+      */
+    }
+  }
+
+  .showCards{
+    display: flex;
+    width:100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    position:relative;
+    top: 0;
+    margin:0;
+    background-color:@base-color;
+
+    .cardFrontImg {
+      width:100%;
+      height:100%;
+      position:absolute;
+      left:0px;
+      top:0px;
+      background-size:cover;
+      background-position: top center;
+    }
+    .card {
+      overflow: hidden;
+      border: 10px solid #000000;
+      margin: 0.2%;
+      width: 25%;
+      box-sizing: border-box;
+      .cardImg {
+        box-sizing:border-box;
+        border:10px solid @base-color;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        position:relative;
+        background-color:@base-color;
+        background-repeat:no-repeat;
+
+        .homeSlideHover {
+          transition: all 0.2s ease-in;
+          z-index:0;
+          background-size: 103% auto!important;
+          background-position: -7px -7px !important;
+          background-repeat: no-repeat;
+        }
+        .homeSlideOff {
+          transition: all 0.2s ease-in;
+          background-size:100% auto!important;
+          background-position: 0px 0px!important;
+          z-index:100;
+          background-repeat: no-repeat;
+        }
+
+        img {
+          position: relative;
+          min-height:250px;
+        }
+        .card-text {
+          width: 100%;
+          position: absolute;
+          background-color: @base6-color;
+          bottom: 0px;
+          z-index:101;
+          h1 {
+            padding: 2%;
+            font-family: Times;
+            font-size:1.8vw;
+            position: relative;
+            top: 50%;
+            padding-left: 2%;
+            font-weight:bolder;
+            }
+          }
+        }
+      }
+    }
+}
+
+@media(max-width:800px) {
+  .show {
+    .showPosterArea {
+      .showPoster {
+        .showpage_hype_container {
+          position: relative;
+          height: 80vh;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1100px) {
+  .show {
+    .showPosterArea {
+      .showPoster {
+        background-color: @base-color;
+        background-position-y:0;
+        background-attachment: inherit;
+      }
+    }
+    .showCards {
+      flex-flow: row;
+      flex-direction:row;
+      flex-wrap: wrap;
+      position: relative;
+      background-color: @base-color;
+      top: 0;
+      margin-top: 0;
+      .card {
+        overflow:hidden;
+        width:32%;
+        height:auto;
+        .cardImg {
+          overflow: hidden;
+          .card-text {
+            h1 {
+                font-size:2.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:800px) {
+  .show {
+    .showCards {
+      top:0;
+      margin-top:0;
+      .card {
+        width: 100%;
+        .cardImg {
+          .card-text {
+            h1 {
+                font-size:4.0vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:600px) {
+    .show {
+      .showCards {
+        flex-direction: column;
+        flex-wrap:nowrap;
+        .card {
+          width:100%;
+          .cardImg {
+            .card-text {
+              h1 {
+                  font-size:5.0vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

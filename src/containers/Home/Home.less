@@ -1,0 +1,90 @@
+@import (reference) "../../theme/variables.less";
+.home {
+  /* background-image:url(https://d1bud3tr8474k6.cloudfront.net/wp-content/uploads/2017/08/29191740/abs-logo-tilted2.png); */
+  .home-content {
+    padding-bottom:30px;
+  }
+
+  .footerSponsorContainer {
+    width: 100%;
+    border-bottom: 1px solid #cfcfcf;
+    position:relative;
+    float:left;
+    margin-bottom:0;
+    margin-top:0;
+    background:white;
+    .footerSponsorsTitle {
+      margin-top: 20px;
+      border-bottom: 1px solid #cfcfcf;
+      width:100%;
+      text-align:center;
+      h1 {
+        padding-bottom: 1%;
+        a {
+          text-align:center;
+          color: @brand-accent-color;
+          font-family: 'Didact Gothic', sans-serif;
+          font-size: 1.5vw;
+          text-transform: uppercase;
+          text-decoration:none;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
+    }
+    .footerSponsors {
+      position:relative;
+      width:95%;
+      margin: 0 auto;
+      display:flex;
+      flex-direction: row;
+      flex-wrap:nowrap;
+      .sponsor {
+        position:relative;
+        float:left;
+        padding:1%;
+        a {
+          opacity: 1.0;
+          transition: opacity 0.2s ease-in;
+        }
+        a:hover {
+          opacity: 0.3;
+          transition: opacity 0.2s ease-in;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:699px) {
+  .home {
+    .home-content {
+      width:100%;
+      position:relative;
+      float:left;
+      .rails {
+        width:100%;
+        position:relative;
+        float:left;
+      }
+    }
+  }
+}
+
+@media(min-width:700px) {
+  .home {
+    .home-content {
+      width:100%;
+      position:relative;
+      float:left;
+
+      .rails {
+        width:100%;
+        position:relative;
+        float:left;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import (reference) "../../theme/variables.less";
+
+.player-control-bar {
+  background-color: @brand-accent-color;
+  width:100%;
+  position:relative;
+  float:left;
+  .controls-container {
+    width:100%;
+    padding: 1% 0;
+    position:relative;
+    float:left;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    .controls-prev, .controls-next, .controls-more, .controls-comment, .controls-share {
+      width:5%;
+    }
+    .controls-meta {
+      width:75%;
+      h2 {
+        position:relative;
+        color: @base-color;
+        top:5px;
+        font-size:2.0vw;
+      }
+      h3 {
+        color: @brand-accent-color2;
+        position:relative;
+        font-size:2.0vw;
+        top:5px;
+        text-transform:uppercase;;
+      }
+    }
+  }
+
+  .description-container {
+    width:100%;
+    position:relative;
+    float:left;
+    .description {
+      width:75%;
+      margin-left:5%;
+      font-family: 'Didact Gothic', sans-serif;
+      font-size: 1.5vw;
+    }
+
+    .hide-me {
+      max-height: 0;
+      transition: all 1000ms ease !important;
+      overflow: hidden;
+      color: @brand-accent-color2;
+    }
+
+    .show-me {
+      padding:2% 0;
+      border-top: 1px solid @brand-accent-color2;
+      max-height: 500px;
+      opacity: 100;
+      transition: all 1000ms ease !important;
+      overflow: hidden;
+      color: @base-color;
+    }
+
+  }
+}
+
+
+@media(max-width:800px) {
+  .player-control-bar {
+    .controls-container {
+      .controls-prev, .controls-next, .controls-more, .controls-comment, .controls-share {
+        width:10%;
+      }
+      .controls-meta {
+        width:50%;
+        margin-left:0;
+        h2, h3 {
+          font-size: 3.0vw;
+        }
+      }
+    }
+
+    .description-container {
+      .description {
+        font-size: 3.0vw;
+      }
+    }
+  }
+
+}

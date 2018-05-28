@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+git config codedeploy.domain americanbeautystar.com
+git config codedeploy.region us-west-2
+#git config codedeploy.git-remote git@github.com:ibejohn818/nosey.com.git
+git config codedeploy.git-remote git@dotstudioz.git.beanstalkapp.com:/dotstudioz/abs.git
+
+
+# PRODUCTION
+git config codedeploy.prod.aws-profile amer-bstar-prod
+git config codedeploy.prod.bucket amer-bstar-prod-s3-codedeploy-1qh6x4bj3hkbk
+git config codedeploy.prod.app-name amer-bstar-prod-code-deploy-AmerBStarNodeJS-FO3DFG6LHYBG
+git config codedeploy.prod.app-group amer-bstar-prod-code-deploy-AmerBStarNodeJSGroup-1TDWIMO3FX3LE
+git config codedeploy.prod.branch master
+
+
+
+# STAGING
+git config codedeploy.staging.aws-profile amer-bstar-staging
+git config codedeploy.staging.bucket amer-bstar-staging-s3-codedeploy-j7q1b7wbe6g7
+git config codedeploy.staging.app-name amer-bstar-staging-code-deploy-AmerBStarNodeJS-1L0JYM3PIIOW0
+git config codedeploy.staging.app-group amer-bstar-staging-code-deploy-AmerBStarNodeJSGroup-1HREAHLIS4WVF
+git config codedeploy.staging.branch staging

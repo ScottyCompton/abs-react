@@ -1,0 +1,24 @@
+@import (reference) "../../theme/variables.less";
+
+.socialIcons {
+  cursor:pointer;
+  position:relative;
+  margin: 0 auto;
+  width:50%;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  .socialIcon {
+    margin: 0 5%;
+    a {
+      svg.headerIcon {
+        color: @base7-color!important;
+       }
+    }
+    a:hover {
+      svg.headerIcon {
+        color:@base2-color!important;
+      }
+    }
+  }
+}

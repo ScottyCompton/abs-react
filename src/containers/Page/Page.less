@@ -1,0 +1,146 @@
+@import (reference) "../../theme/variables.less";
+
+.post{
+  background:white;
+  .aLittleSpace {
+    height:3vh;
+    width:100%;
+    position:relative;
+    float:left;
+  }
+  .blurbArea, .optionalVideo, .content {
+    margin-top: 3vh!important;
+  }
+  .blurbText, .content {
+    font-size: 3.0vh;
+  }
+  .typeHeader{
+    background: black;
+    text-align: center;
+    clear:both;
+
+    h2{
+      color:white;
+      font-size:5.0vh;
+      padding: 15px;
+      font-family: 'Bodoni W01 Book_709611';
+    }
+  }
+
+  .primaryContent {
+    background-image: url(https://d1bud3tr8474k6.cloudfront.net/wp-content/uploads/2017/07/12184126/blogborder.png);
+    background-repeat: repeat-y;
+
+    .belowShopSlider {
+      width: 100%;
+      min-height: 2vh;
+      padding: 6px;
+      background-color:@base6-color;
+      margin-top: 2vh;
+    }
+
+    .shopSliderLabel h3 {
+      text-align: center;
+      font-size: 3.0vh;
+      font-weight: bolder;
+      color: #000;
+      font-family: Lato;
+      padding: 2%;
+      margin: 0;
+    }
+
+    .socialSharing {
+        width: 100%;
+        min-height: 2vh;
+        padding: 2px;
+        background-color:@base6-color;
+        margin-top: 2vh;
+        .socialIcons {
+          position:relative;
+          margin: 0 auto;
+          width: 20%;
+          min-width: 250px;
+          display:flex;
+          .socialIcon {
+            margin: 0 5%;
+            a {
+              svg.headerIcon {
+                padding:3px 3px;
+                width:1.5vmax!important;
+                height:1.5vmax!important;
+                color: @base7-color!important;
+               }
+            }
+            a:hover {
+              svg.headerIcon {
+                color:@base2-color!important; /* don't judge me... */
+              }
+            }
+          }
+        }
+    }
+  }
+
+  .secondaryContent{
+    padding: 5vh 2vw;
+    box-sizing: border-box;
+    background:white;
+
+    .emailSignup{
+      width:100%;
+      margin: 0 auto;
+      text-align: center;
+
+      span{
+        display:block;
+      }
+
+      input{
+        width:100%;
+        margin-top:15px;
+      }
+    }
+
+    .advertSlot{
+      text-align:center;
+      margin:30px 0;
+    }
+  }
+
+  .mainBody{
+    margin: 5vh;
+    * {
+      font-family: 'Bodoni W01 Book_709611';
+    }
+    h3{
+      font-size: 6.0vh;
+      font-weight:bolder;
+      padding-bottom:3vh;
+      color: @brand-accent-color;
+    }
+    .metaInfo {
+      background-color: @base6-color;
+    }
+    .breadcrumb, .postDate {
+      padding: 1vh 10px;
+    }
+
+    .breadcrumb ul {
+
+      li{
+        display:inline-block;
+        text-transform: capitalize;
+        a {
+          text-decoration:none;
+          color: @base2-color;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+      li + li:before {
+        content: " / ";
+      }
+    }
+  }
+}

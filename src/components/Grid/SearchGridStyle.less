@@ -1,0 +1,74 @@
+@import (reference) "../../theme/variables.less";
+
+.searchGridWrapper {
+  padding-top:7vh;
+  * {
+    font-family: 'Bodoni W01 Book_709611';
+  }
+  .searchCategory {
+    color: @base5-color;
+    padding: 1%;
+    font-size: 2.5vw;
+    color: @brand-accent-color;
+  }
+
+  .searchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .searchResults {
+      width: 100%;
+    }
+
+      .searchGridItem {
+        margin-right: 50px;
+        background: @base6-color;
+        width: 22%;
+        display: inline-block;
+        position: relative;
+        padding: 0.5%;
+        margin: 1%;
+
+        .searchGridPlaceholder {
+          position:relative;
+        }
+        .searchGridImgContainer {
+          position:relative;
+
+          .searchGridImg {
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0px;
+            top:0px;
+            background-size:cover;
+            background-position-y:20%;
+          }
+        }
+
+
+        .itemTitle{
+          position: relative;
+          bottom: 0;
+          left: 0;
+          font-size: 2.5vh;
+          padding: 2% 0;
+          a {
+            color: @base5-color;
+            text-decoration:none;
+          }
+          a:hover {
+            text-decoration:underline;
+            color:@brand-accent-color2;
+          }
+        }
+        .itemCat {
+          position:relative;
+          font-size:2.5vh;
+          padding-bottom:2%;
+          color: @brand-accent-color;
+        }
+      }
+    }
+}

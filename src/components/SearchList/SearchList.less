@@ -1,0 +1,81 @@
+@import (reference) "../../theme/variables.less";
+
+.search-list-block {
+  background-color:@base2-color;
+  .search-list-results {
+    width:95%;
+    margin-left:2.5%;
+    padding-bottom:5%;
+    float:left;
+    position:relative;
+    .search-list {
+      .search-list-title {
+        font-family: 'Bodoni W01 Book_709611';
+        font-size: 5vw;
+        color: @brand-accent-color;
+        margin-top: 5%;
+        margin-bottom:3%;
+      }
+      ul {
+        width:100%;
+        li {
+          cursor:pointer;
+          border-bottom: 1px solid #303030;
+          width:100%;
+          display:block;
+          position:relative;
+          float:left;
+          padding: 1% 0;
+          font-family: 'Lato';
+          margin-bottom:1%;
+          a {
+            color:@base-color;
+            text-decoration:none;
+            .searchlist-item-poster {
+              position:relative;
+              float:left;
+              width:40%;
+              padding-right:2%;
+              background-repeat: no-repeat;
+              background-size:100%;
+              border:1px solid @base-color;
+            }
+            .searchlist-item-text {
+              position:relative;
+              float:left;
+              width:54%;
+              padding: 1.5%;
+              .searchlist-item-title {
+                position:relative;
+                float:left;
+                width:100%;
+                padding-right:0;
+                h3 {
+                  font-size:4.5vw;
+                }
+                h4 {
+                  font-size: 3.5vw;
+                  margin-top: 6%;
+                  text-align:justify;
+                }
+              }
+              .searchlist-series-title {
+                position:relative;
+                float:left;
+                width:20%;
+                text-align:right;
+                font-size:2.2vw;
+              }
+            }
+          }
+        }
+        li:nth-child(odd) {
+          background-color:#101010;
+        }
+        li:last-child {
+          border:none;
+        }
+      }
+    }
+  }
+}

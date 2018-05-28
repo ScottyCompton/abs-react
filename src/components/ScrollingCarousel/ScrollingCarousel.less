@@ -1,0 +1,316 @@
+@import (reference) "../../theme/variables.less";
+
+.look {
+  .topCarouselSmallScreen {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position:relative;
+    background-color:@base-color;
+    width:100%;
+
+      .showCarouselItem {
+        width:50%;
+        display:block;
+        img {
+          box-sizing:border-box;
+        }
+        .showCarouselItemContainer {
+          position:relative;
+          a {
+            width:100%;
+            height:auto;
+            display:block;
+            .showCarouselImgContainer {
+              box-sizing: border-box;
+              width:100%;
+              height:85%;
+              position:absolute;
+              bottom:0px;
+              background-repeat: no-repeat;
+            }
+            .showCarouselHead {
+              box-sizing: border-box;
+              width:100%;
+              height: 15%;
+              position:absolute;
+              z-index: 100;
+
+              .showCarouselTextContainer {
+                box-sizing: border-box;
+                overflow:hidden;
+                width: 95%;
+                height: 100%;
+                position: relative;
+                font-family: 'Bodoni W01 Book_709611';
+                margin: 0 auto;
+                color: #FFFFFF;
+                .showCarouselPostDate {
+                  position: absolute;
+                  right: 0px;
+                  top: 1vh;
+                  font-size: 1.2vw;
+                  font-family: 'Didact Gothic', sans-serif;
+                }
+                .showCarouselDesc {
+                  position:absolute;
+                  bottom: 20px;
+                  h3 {
+                    position: relative;
+                    font-size: 2.2vw;
+                    white-space: nowrap;
+                    left:0px;
+                    font-weight: normal;
+                  }
+                  h4 {
+                    left: 0px;
+                    position: relative;
+                    font-size: 1.2vw;
+                    font-weight: normal;
+                    white-space: nowrap;
+                    padding-bottom: 3%;
+                    font-family: 'Didact Gothic', sans-serif;
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+
+  }
+
+
+  .topCarousel {
+    .slider {
+      .slick-slider {
+        .fa-angle-double-left,
+        .fa-angle-double-right {
+          font-size:72px;
+          color: @brand-accent-color;
+        }
+        .fa-angle-double-left:hover,
+        .fa-angle-double-right:hover {
+          font-size:72px;
+          color: @brand-accent-color2;
+        }
+        .leftArrow, .rightArrow {
+          position:absolute;
+          z-index: 1000;
+          top:50%;
+        }
+        .leftArrow {
+          left: 0px;
+        }
+        .rightArrow {
+          right: 0px;
+        }
+      }
+    }
+    .showCarouselItem {
+      border:1px solid @base-color;
+      box-sizing: border-box;
+      img {
+        box-sizing:border-box;
+        width:100%;
+        height:auto;
+      }
+      .showCarouselItemContainer {
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        a {
+          display:block;
+          width:100%;
+          height:auto;
+          .showCarouselImgContainer {
+            box-sizing: border-box;
+            width:100%;
+            height:85%;
+            position:absolute;
+            bottom:0px;
+            background-repeat:no-repeat;
+          }
+          .showCarouselHead {
+            box-sizing: border-box;
+            width:100%;
+            height: 15%;
+            position:absolute;
+            z-index: 100;
+
+            .showCarouselTextContainer {
+              box-sizing: border-box;
+              overflow:hidden;
+              width: 95%;
+              height: 100%;
+              position: relative;
+              font-family: 'Bodoni W01 Book_709611';
+              margin: 0 auto;
+              color: #FFFFFF;
+              .showCarouselPostDate {
+                position: absolute;
+                right: 0px;
+                top: 1vh;
+                font-size: 0.9vw;
+                font-family: 'Didact Gothic', sans-serif;
+              }
+              .showCarouselDesc {
+                position:absolute;
+                bottom: 0.5vh;
+                h3 {
+                  position: relative;
+                  font-size: 2.0vw;
+                  white-space: nowrap;
+                  left:0px;
+                  font-weight: normal;
+                }
+                h4 {
+                  left: 0px;
+                  position: relative;
+                  font-size: 1.2vw;
+                  font-weight: normal;
+                  white-space: nowrap;
+                  font-family: 'Didact Gothic', sans-serif;
+                  padding-bottom: 2%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .carouselSlideHover {
+    transition: all 0.2s ease-in;
+    z-index:0;
+    background-size: 103%!important;
+    background-position: -10px -10px!important;
+  }
+  .carouselSlideOff {
+    transition: all 0.2s ease-in;
+    background-size: 100%!important;
+    background-position: 0px 0px!important;
+    z-index:100;
+  }
+}
+
+@media (orientation:landscape) {
+
+  @media (max-width:1100px) {
+    .look {
+      .topCarouselSmallScreen {
+        .showCarouselItem {
+          .showCarouselItemContainer {
+              a {
+              .showCarouselHead {
+                .showCarouselTextContainer {
+                  .showCarouselPostDate {
+                    font-size:20px;
+                  }
+                  .showCarouselDesc {
+                    h3 {
+                      font-size:36px;
+                    }
+                    h4 {
+                      font-size:20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @media (max-width:750px) {
+    .look {
+      .topCarouselSmallScreen {
+        .showCarouselItem {
+          .showCarouselItemContainer {
+            a {
+              .showCarouselHead {
+                .showCarouselTextContainer {
+                  .showCarouselPostDate {
+                    font-size:2.5vw;
+                  }
+                  .showCarouselDesc {
+                    h3 {
+                      font-size:4.5vw;
+                    }
+                    h4 {
+                      font-size:2.5vw;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (orientation:portrait) {
+  @media (max-width:600px) {
+    .look {
+      .topCarouselSmallScreen {
+        flex-direction: row;
+        flex-wrap:wrap;
+        .showCarouselItem {
+          width:50%;
+          .showCarouselItemContainer {
+            a {
+              .showCarouselHead {
+                .showCarouselTextContainer {
+                  .showCarouselPostDate {
+                    font-size:2.5vw;
+                  }
+                  .showCarouselDesc {
+                    h3 {
+                      font-size:4.0vw;
+                    }
+                    h4 {
+                      font-size:3vw;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width:601px) and (max-width:1100px) {
+    .look {
+      .topCarouselSmallScreen {
+        .showCarouselItem {
+          .showCarouselItemContainer {
+            a {
+              .showCarouselHead {
+                .showCarouselTextContainer {
+                  .showCarouselPostDate {
+                    font-size:1.75vw;
+                  }
+                  .showCarouselDesc {
+                    h3 {
+                      font-size:4.0vw;
+                    }
+                    h4 {
+                      font-size:2.25vw;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

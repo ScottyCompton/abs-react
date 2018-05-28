@@ -1,0 +1,131 @@
+@import (reference) "../../theme/variables.less";
+
+.watchlist {
+  background-color:@base-color;
+  position:relative;
+  float:left;
+  .ivp-watch-list {
+    width:95%;
+    margin-left:2.5%;
+    padding-bottom:5%;
+    float:left;
+    position:relative;
+    .ivp-list {
+      .ivp-list-title {
+        font-family: 'Bodoni W01 Book_709611';
+        font-size: 5vw;
+        color: @brand-accent-color;
+        margin-top: 2%;
+        margin-bottom:1%;
+      }
+      ul {
+        width:100%;
+        li {
+          cursor:pointer;
+          border-bottom: 1px solid #c5c5c5;
+          width:100%;
+          display:block;
+          position:relative;
+          float:left;
+          padding: 1% 0;
+          font-family: 'Didact Gothic', serif;
+          margin-bottom:3%;
+          a {
+            color:@base-color;
+            text-decoration:none;
+            .watchlist-item-poster {
+              position:relative;
+              float:left;
+              width:18%;
+              padding-right:2%;
+              img {
+                border:1px solid @base-color;
+              }
+            }
+            .watchlist-item-text {
+              position:relative;
+              float:left;
+              width:80%;
+              .watchlist-item-title {
+                position:relative;
+                float:left;
+                width:78%;
+                padding-right:2%;
+                font-size:3.2vw;
+                color: @brand-accent-color;
+                font-family: 'Bodoni W01 Book_709611';
+              }
+              .watchlist-series-title {
+                position:relative;
+                float:left;
+                width:20%;
+                text-align:right;
+                font-size:2.2vw;
+              }
+              .watchlist-short-desc {
+                color: @base2-color;
+                position:relative;
+                float:left;
+              }
+            }
+          }
+        }
+        li:nth-child(odd) {
+          background-color:#efefef;
+        }
+        li:last-child {
+          border:none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1100px) {
+  .watchlist {
+    .ivp-watch-list {
+      .ivp-list {
+        .ivp-list-title {
+          font-size:3.5vw;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:800px) {
+  .watchlist {
+    .ivp-watch-list {
+      .ivp-list {
+        .ivp-list-title {
+          font-size:4.5vw;
+        }
+        ul {
+          li {
+            a {
+              .watchlist-item-poster {
+                width:35%;
+              }
+              .watchlist-item-text {
+                width:63%;
+                .watchlist-item-title {
+                  width:100%;
+                  font-size: 4.5vw;
+                }
+                .watchlist-series-title {
+                  width:100%;
+                  text-align:left;
+                  font-size: 3.0vw;
+                  margin-top:5%;
+                }
+                .watchlist-short-desc {
+                  font-size: 3.2vw;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

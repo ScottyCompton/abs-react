@@ -1,0 +1,48 @@
+.navSlider {
+  height:40px;
+  overflow:hidden;
+  width: 100%;
+  position: relative;
+  background-color: @base2-color;
+  padding: 10px 0;
+  border-top: 1px solid @base-color;
+  .slick-slider {
+    .slick-list {
+      .slick-track {
+        .navItem {
+          margin: 0 5px;
+          margin-top:10px;
+          a {
+            color: @base6-color;
+            text-decoration:none;
+            white-space: nowrap;
+            padding:5px;
+            display:block;
+            border-bottom: 3px solid @base2-color;
+            font-family: 'Didact Gothic', sans-serif;
+            text-transform: uppercase;
+          }
+          a.active {
+            border-bottom: 3px solid @brand-accent-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:700px) {
+  .navSlider {
+    .slick-slider {
+      .slick-list {
+        .slick-track {
+          .navItem {
+            a {
+              font-size: 3.0vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
